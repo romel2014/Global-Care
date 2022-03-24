@@ -14,7 +14,7 @@
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-	<title>MLM - Dashboard</title>
+	<title>All Users</title>
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
 						Dashboard
 					</li>
 
-					<li class="sidebar-item active">
+					<li class="sidebar-item ">
 						<a class="sidebar-link" href="user-admin.html">
 							<i class="align-middle" data-feather="user"></i> <span class="align-middle">User Dashboard</span>
             </a>
@@ -45,7 +45,7 @@
             </a>
 					</li>
 
-					<li class="sidebar-item">
+					<li class="sidebar-item active">
 						<a class="sidebar-link" href="users.html">
              			 	<i class="align-middle" data-feather="user"></i> <span class="align-middle">Users</span>
             			</a>
@@ -175,332 +175,88 @@
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3"><strong>User</strong> Dashboard</h1>
+					<h1 class="h3 mb-3"><strong>Users</strong> </h1>
 
 					<div class="row">
-						<div class="col-12">
-							<div class="w-100">
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Total Earnings</h5>
-													</div>
-
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="dollar-sign"></i>
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">P 20,000</h1>
-												
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Available Binary Credits</h5>
-													</div>
-
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="users"></i>
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">12</h1>
-											</div>
-										</div>
-										
-									</div>
-									<div class="col-sm-4">
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Available Unilevel Credits</h5>
-													</div>
-
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="users"></i>
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">10</h1>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Withdraw for Approval </h5>
-													</div>
-
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="dollar-sign"></i>
-															
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">2,000 <span class="text-warning fs-6">  Pending </span> </h1> 
-
-											</div>
-										</div>
-										
-									</div>
-									<div class="col-sm-4">
-
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Affiliate Codes</h5>
-													</div>
-
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="users"></i>
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">ABC123</h1>
-
-											</div>
-										</div>
-									</div>
-
-								</div>
-							</div>
+						<div class="col-12 mb-2 d-flex justify-content-between">
+							<div>			
+								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+							  </div>
+							<a href="/user-add.html" class="btn btn-primary">Add User</a>
 						</div>
-
-						<!-- <div class="col-xl-6 col-xxl-7">
-							<div class="card flex-fill w-100">
-								<div class="card-header">
-
-									<h5 class="card-title mb-0">Recent Movement</h5>
-								</div>
-								<div class="card-body py-3">
-									<div class="chart chart-sm">
-										<canvas id="chartjs-dashboard-line"></canvas>
-									</div>
-								</div>
-							</div>
-						</div> -->
 					</div>
 
 					<div class="row">
-						<div class="col-12 col-lg-6 col-xxl-6 d-flex">
+						
+						<div class="col-12 col-lg-12 col-xxl-12 d-flex">
 							<div class="card flex-fill">
 								<div class="card-header">
 
-									<h5 class="card-title mb-0">Withdrawn money</h5>
+									<h5 class="card-title mb-0">All Transaction</h5>
 								</div>
 								<table class="table table-hover my-0">
 									<thead>
 										<tr>
+											<th>User ID</th>
 											<th>Name</th>
-											<th class="d-none d-xl-table-cell">Start Date</th>
-											<th class="d-none d-xl-table-cell">End Date</th>
-											<th>Status</th>
-											<th class="d-none d-md-table-cell">Amount</th>
+											<th>Date</th>
+											<th>Plan</th>
+											<th>Actions</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td>#3</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-warning">Pending</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
+											<td><a href="/user-profile.html">#0001</a></td>
+											<td class="d-none d-xl-table-cell">John Doe</td>
+											<td class="d-none d-xl-table-cell">03/12/2022</td>
+											<td class="d-none d-xl-table-cell">Gold</td>
+											<td class="d-none d-xl-table-cell">
+												<a href="/user-edit.html" class="btn btn-success btn-sm">Edit</a>
+												<button class="btn btn-danger btn-sm">Delete</button>
+											</td>
 										</tr>
 										<tr>
-											<td>#2</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
+											<td><a href="/user-profile.html">#0002</a></td>
+											<td class="d-none d-xl-table-cell">John Doe</td>
+											<td class="d-none d-xl-table-cell">03/12/2022</td>
+											<td class="d-none d-xl-table-cell">Gold</td>
+											<td class="d-none d-xl-table-cell">
+												<a href="/user-edit.html" class="btn btn-success btn-sm">Edit</a>
+												<button class="btn btn-danger btn-sm">Delete</button>
+											</td>
 										</tr>
 										<tr>
-											<td>#1</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
+											<td><a href="/user-profile.html">#0003</a></td>
+											<td class="d-none d-xl-table-cell">John Doe</td>
+											<td class="d-none d-xl-table-cell">03/12/2022</td>
+											<td class="d-none d-xl-table-cell">Gold</td>
+											<td class="d-none d-xl-table-cell">
+												<a href="/user-edit.html" class="btn btn-success btn-sm">Edit</a>
+												<button class="btn btn-danger btn-sm">Delete</button>
+											</td>
 										</tr>
-										
+										<tr>
+											<td><a href="/user-profile.html">#0004</a></td>
+											<td class="d-none d-xl-table-cell">John Doe</td>
+											<td class="d-none d-xl-table-cell">03/12/2022</td>
+											<td class="d-none d-xl-table-cell">Gold</td>
+											<td class="d-none d-xl-table-cell">
+												<a href="/user-edit.html" class="btn btn-success btn-sm">Edit</a>
+												<button class="btn btn-danger btn-sm">Delete</button>
+											</td>
+										</tr>
+																			
 									</tbody>
 								</table>
-							</div>
-						</div>
-						<div class="col-12 col-lg-6 col-xxl-6 d-flex">
-							<div class="card flex-fill">
-								<div class="card-header">
-
-									<h5 class="card-title mb-0">Unilevel and Binary Bonuses</h5>
-								</div>
-								<table class="table table-hover my-0">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th class="d-none d-xl-table-cell">Start Date</th>
-											<th class="d-none d-xl-table-cell">End Date</th>
-											<th>Status</th>
-											<th class="d-none d-md-table-cell">Amount</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>#3</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-warning">Pending</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										<tr>
-											<td>#2</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										<tr>
-											<td>#1</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										
-									</tbody>
-								</table>
+								
 							</div>
 						</div>
 						
 					</div>
 
-					<div class="row">
-						<div class="col-12 col-lg-6 col-xxl-6 d-flex">
-							<div class="card flex-fill">
-								<div class="card-header">
+					
 
-									<h5 class="card-title mb-0">Direct Referrals</h5>
-								</div>
-								<table class="table table-hover my-0">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th class="d-none d-xl-table-cell">Start Date</th>
-											<th class="d-none d-xl-table-cell">End Date</th>
-											<th>Status</th>
-											<th class="d-none d-md-table-cell">Amount</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>#3</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-warning">Pending</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										<tr>
-											<td>#2</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										<tr>
-											<td>#1</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="col-12 col-lg-6 col-xxl-6 d-flex">
-							<div class="card flex-fill">
-								<div class="card-header">
-
-									<h5 class="card-title mb-0">Indirect Referrals</h5>
-								</div>
-								<table class="table table-hover my-0">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th class="d-none d-xl-table-cell">Start Date</th>
-											<th class="d-none d-xl-table-cell">End Date</th>
-											<th>Status</th>
-											<th class="d-none d-md-table-cell">Amount</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>#3</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-warning">Pending</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										<tr>
-											<td>#2</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										<tr>
-											<td>#1</td>
-											<td class="d-none d-xl-table-cell">01/01/2021</td>
-											<td class="d-none d-xl-table-cell">31/06/2021</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">20,000</td>
-										</tr>
-										
-									</tbody>
-								</table>
-							</div>
-						</div>
-						
-					</div>
-
-					<div class="row">
-						<div class="col-12 col-md-6">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">News</h5>
-								</div>
-								<div class="card-body">
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="card-link">Read More</a>
-									<hr>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="card-link">Read More</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-md-6">
-							<div class="card bg-info text-white">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Announcement</h5>
-								</div>
-								<div class="card-body">
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									
-								</div>
-							</div>
-						</div>
-					</div>
+				
 
 				</div>
 			</main>
